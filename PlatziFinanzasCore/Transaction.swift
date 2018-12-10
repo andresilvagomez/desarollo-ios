@@ -4,7 +4,7 @@ public enum TransactionCategory {
     case earn, expend
 }
 
-public struct Transaction {
+public class Transaction {
     var uuid = UUID()
     var value: Float
     var category: TransactionCategory
@@ -16,6 +16,19 @@ public struct Transaction {
         self.category = category
         self.name = name
         self.date = date
+    }
+    
+    public func data() -> [String: Any]? {
+        let jsonEncoder = JSONEncoder()
+        guard let data = try jsonEncoder.encode(self) else {
+            return nil
+        }
+        
+        guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+            return nil
+        }
+        
+        return json
     }
 }
 
