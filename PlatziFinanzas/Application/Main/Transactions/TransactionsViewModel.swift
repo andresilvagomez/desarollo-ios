@@ -27,7 +27,7 @@ class TransactionsViewModel {
     }
     
     init() {
-        db.collection("trasactions").getDocuments { (snapshot, error) in
+        db.collection("transactions").getDocuments { (snapshot, error) in
             if let error = error {
                 print(error.localizedDescription)
                 return
