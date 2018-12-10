@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96AB7471D990BCD2A1596732 /* Pods_PlatziFinanzas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A4FD28EE359557E1B982A0 /* Pods_PlatziFinanzas.framework */; };
 		9F03432F219C57E300603993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F03432E219C57E300603993 /* AppDelegate.swift */; };
 		9F034334219C57E300603993 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F034332219C57E300603993 /* Main.storyboard */; };
 		9F034336219C57E400603993 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F034335219C57E400603993 /* Assets.xcassets */; };
 		9F034339219C57E400603993 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F034337219C57E400603993 /* LaunchScreen.storyboard */; };
-		9F449FD0219C5E2D0050784B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F03432E219C57E300603993 /* AppDelegate.swift */; };
-		9F449FD3219C5E2D0050784B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F034337219C57E400603993 /* LaunchScreen.storyboard */; };
-		9F449FD4219C5E2D0050784B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F034335219C57E400603993 /* Assets.xcassets */; };
-		9F449FD5219C5E2D0050784B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F034332219C57E300603993 /* Main.storyboard */; };
-		9F449FDE219C5E830050784B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F449FDD219C5E830050784B /* MapKit.framework */; };
+		9F330CDF21BEA06C003FB69E /* PlatziFinanzasCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F330CDD21BEA06C003FB69E /* PlatziFinanzasCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F330CE221BEA06C003FB69E /* PlatziFinanzasCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F330CDB21BEA06C003FB69E /* PlatziFinanzasCore.framework */; };
+		9F330CE321BEA06C003FB69E /* PlatziFinanzasCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F330CDB21BEA06C003FB69E /* PlatziFinanzasCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F330CEB21BEA088003FB69E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F330CE721BEA087003FB69E /* User.swift */; };
+		9F330CEC21BEA088003FB69E /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F330CE821BEA088003FB69E /* Account.swift */; };
+		9F330CED21BEA088003FB69E /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F330CE921BEA088003FB69E /* Transaction.swift */; };
+		9F330CEE21BEA088003FB69E /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F330CEA21BEA088003FB69E /* Budget.swift */; };
 		9F62FD24219C914700A83344 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F62FD23219C914700A83344 /* Shadow.swift */; };
 		9F62FD28219CAEE500A83344 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F62FD27219CAEE500A83344 /* OnBoarding.storyboard */; };
 		9F62FD2A219CB19D00A83344 /* OnBoardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F62FD29219CB19D00A83344 /* OnBoardingContainerViewController.swift */; };
@@ -41,6 +44,16 @@
 		9FF2782A219C7E830083760B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF27829219C7E830083760B /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9F330CE021BEA06C003FB69E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F034323219C57E300603993 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F330CDA21BEA06C003FB69E;
+			remoteInfo = PlatziFinanzasCore;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		9FB0621B219DD18F00EEB1A9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -49,6 +62,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9FB0621A219DD18F00EEB1A9 /* Lottie.framework in Embed Frameworks */,
+				9F330CE321BEA06C003FB69E /* PlatziFinanzasCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,14 +70,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1CBF10F3230B05D14696B0FE /* Pods-PlatziFinanzas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatziFinanzas.debug.xcconfig"; path = "Target Support Files/Pods-PlatziFinanzas/Pods-PlatziFinanzas.debug.xcconfig"; sourceTree = "<group>"; };
+		56A4FD28EE359557E1B982A0 /* Pods_PlatziFinanzas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatziFinanzas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95EFEB7D324E1A71F8932C65 /* Pods-PlatziFinanzas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatziFinanzas.release.xcconfig"; path = "Target Support Files/Pods-PlatziFinanzas/Pods-PlatziFinanzas.release.xcconfig"; sourceTree = "<group>"; };
 		9F03432B219C57E300603993 /* PlatziFinanzas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatziFinanzas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F03432E219C57E300603993 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F034333219C57E300603993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F034335219C57E400603993 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F034338219C57E400603993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F03433A219C57E400603993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F449FD9219C5E2D0050784B /* Production.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Production.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F449FDA219C5E2D0050784B /* Production.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Production.plist; path = /Users/andresilvagomez/Desktop/PlatziFinanzas/Production.plist; sourceTree = "<absolute>"; };
+		9F330CDB21BEA06C003FB69E /* PlatziFinanzasCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlatziFinanzasCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F330CDD21BEA06C003FB69E /* PlatziFinanzasCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatziFinanzasCore.h; sourceTree = "<group>"; };
+		9F330CDE21BEA06C003FB69E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F330CE721BEA087003FB69E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9F330CE821BEA088003FB69E /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		9F330CE921BEA088003FB69E /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		9F330CEA21BEA088003FB69E /* Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		9F449FDB219C5E740050784B /* Production.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Production.entitlements; sourceTree = "<group>"; };
 		9F449FDD219C5E830050784B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9F62FD23219C914700A83344 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
@@ -88,6 +110,7 @@
 		9FE368CC219DAD5E00606E29 /* TransactionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionsCell.xib; sourceTree = "<group>"; };
 		9FE368CE219DADCA00606E29 /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 		9FF27829219C7E830083760B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		B186646970A752E3385885F3 /* Pods_PlatziFinanzasCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatziFinanzasCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,28 +119,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FB06218219DD18800EEB1A9 /* Lottie.framework in Frameworks */,
+				9F330CE221BEA06C003FB69E /* PlatziFinanzasCore.framework in Frameworks */,
+				96AB7471D990BCD2A1596732 /* Pods_PlatziFinanzas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9F449FD1219C5E2D0050784B /* Frameworks */ = {
+		9F330CD821BEA06C003FB69E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F449FDE219C5E830050784B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6805B46EBCFEA23C276D299B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1CBF10F3230B05D14696B0FE /* Pods-PlatziFinanzas.debug.xcconfig */,
+				95EFEB7D324E1A71F8932C65 /* Pods-PlatziFinanzas.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9F034322219C57E300603993 = {
 			isa = PBXGroup;
 			children = (
 				9FB06215219DD12F00EEB1A9 /* Cartfile */,
 				9F449FDB219C5E740050784B /* Production.entitlements */,
 				9F03432D219C57E300603993 /* PlatziFinanzas */,
+				9F330CDC21BEA06C003FB69E /* PlatziFinanzasCore */,
 				9F03432C219C57E300603993 /* Products */,
 				9F449FDC219C5E830050784B /* Frameworks */,
+				6805B46EBCFEA23C276D299B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				9F03432B219C57E300603993 /* PlatziFinanzas.app */,
-				9F449FD9219C5E2D0050784B /* Production.app */,
+				9F330CDB21BEA06C003FB69E /* PlatziFinanzasCore.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,11 +176,26 @@
 			path = PlatziFinanzas;
 			sourceTree = "<group>";
 		};
+		9F330CDC21BEA06C003FB69E /* PlatziFinanzasCore */ = {
+			isa = PBXGroup;
+			children = (
+				9F330CE821BEA088003FB69E /* Account.swift */,
+				9F330CEA21BEA088003FB69E /* Budget.swift */,
+				9F330CE921BEA088003FB69E /* Transaction.swift */,
+				9F330CE721BEA087003FB69E /* User.swift */,
+				9F330CDD21BEA06C003FB69E /* PlatziFinanzasCore.h */,
+				9F330CDE21BEA06C003FB69E /* Info.plist */,
+			);
+			path = PlatziFinanzasCore;
+			sourceTree = "<group>";
+		};
 		9F449FDC219C5E830050784B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				9FB06217219DD18800EEB1A9 /* Lottie.framework */,
 				9F449FDD219C5E830050784B /* MapKit.framework */,
+				56A4FD28EE359557E1B982A0 /* Pods_PlatziFinanzas.framework */,
+				B186646970A752E3385885F3 /* Pods_PlatziFinanzasCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -165,7 +215,6 @@
 			children = (
 				9F03432E219C57E300603993 /* AppDelegate.swift */,
 				9F03433A219C57E400603993 /* Info.plist */,
-				9F449FDA219C5E2D0050784B /* Production.plist */,
 				9F034337219C57E400603993 /* LaunchScreen.storyboard */,
 			);
 			path = Base;
@@ -310,42 +359,57 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		9F330CD621BEA06C003FB69E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F330CDF21BEA06C003FB69E /* PlatziFinanzasCore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		9F03432A219C57E300603993 /* PlatziFinanzas */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F03433D219C57E400603993 /* Build configuration list for PBXNativeTarget "PlatziFinanzas" */;
 			buildPhases = (
+				E1D4E2E2F8F11135445AAF02 /* [CP] Check Pods Manifest.lock */,
 				9F034327219C57E300603993 /* Sources */,
 				9F034328219C57E300603993 /* Frameworks */,
 				9F034329219C57E300603993 /* Resources */,
 				9FB0621B219DD18F00EEB1A9 /* Embed Frameworks */,
 				9FB0621D219DD1E600EEB1A9 /* ShellScript */,
+				AF37DB70EA7010CA4CBDD6BF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9F330CE121BEA06C003FB69E /* PBXTargetDependency */,
 			);
 			name = PlatziFinanzas;
 			productName = PlatziFinanzas;
 			productReference = 9F03432B219C57E300603993 /* PlatziFinanzas.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9F449FCD219C5E2D0050784B /* Production */ = {
+		9F330CDA21BEA06C003FB69E /* PlatziFinanzasCore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F449FD6219C5E2D0050784B /* Build configuration list for PBXNativeTarget "Production" */;
+			buildConfigurationList = 9F330CE421BEA06C003FB69E /* Build configuration list for PBXNativeTarget "PlatziFinanzasCore" */;
 			buildPhases = (
-				9F449FCE219C5E2D0050784B /* Sources */,
-				9F449FD1219C5E2D0050784B /* Frameworks */,
-				9F449FD2219C5E2D0050784B /* Resources */,
+				9F330CD621BEA06C003FB69E /* Headers */,
+				9F330CD721BEA06C003FB69E /* Sources */,
+				9F330CD821BEA06C003FB69E /* Frameworks */,
+				9F330CD921BEA06C003FB69E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Production;
-			productName = PlatziFinanzas;
-			productReference = 9F449FD9219C5E2D0050784B /* Production.app */;
-			productType = "com.apple.product-type.application";
+			name = PlatziFinanzasCore;
+			productName = PlatziFinanzasCore;
+			productReference = 9F330CDB21BEA06C003FB69E /* PlatziFinanzasCore.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -360,15 +424,9 @@
 					9F03432A219C57E300603993 = {
 						CreatedOnToolsVersion = 10.1;
 					};
-					9F449FCD219C5E2D0050784B = {
-						SystemCapabilities = {
-							com.apple.Maps.iOS = {
-								enabled = 1;
-							};
-							com.apple.Push = {
-								enabled = 1;
-							};
-						};
+					9F330CDA21BEA06C003FB69E = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -386,7 +444,7 @@
 			projectRoot = "";
 			targets = (
 				9F03432A219C57E300603993 /* PlatziFinanzas */,
-				9F449FCD219C5E2D0050784B /* Production */,
+				9F330CDA21BEA06C003FB69E /* PlatziFinanzasCore */,
 			);
 		};
 /* End PBXProject section */
@@ -415,13 +473,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9F449FD2219C5E2D0050784B /* Resources */ = {
+		9F330CD921BEA06C003FB69E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F449FD3219C5E2D0050784B /* LaunchScreen.storyboard in Resources */,
-				9F449FD4219C5E2D0050784B /* Assets.xcassets in Resources */,
-				9F449FD5219C5E2D0050784B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +501,52 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
+		AF37DB70EA7010CA4CBDD6BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlatziFinanzas/Pods-PlatziFinanzas-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlatziFinanzas/Pods-PlatziFinanzas-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1D4E2E2F8F11135445AAF02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PlatziFinanzas-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -465,15 +566,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9F449FCE219C5E2D0050784B /* Sources */ = {
+		9F330CD721BEA06C003FB69E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F449FD0219C5E2D0050784B /* AppDelegate.swift in Sources */,
+				9F330CEB21BEA088003FB69E /* User.swift in Sources */,
+				9F330CEC21BEA088003FB69E /* Account.swift in Sources */,
+				9F330CEE21BEA088003FB69E /* Budget.swift in Sources */,
+				9F330CED21BEA088003FB69E /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F330CE121BEA06C003FB69E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F330CDA21BEA06C003FB69E /* PlatziFinanzasCore */;
+			targetProxy = 9F330CE021BEA06C003FB69E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9F034332219C57E300603993 /* Main.storyboard */ = {
@@ -621,7 +733,9 @@
 		};
 		9F03433E219C57E400603993 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CBF10F3230B05D14696B0FE /* Pods-PlatziFinanzas.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69RRCEKXZC;
@@ -644,7 +758,9 @@
 		};
 		9F03433F219C57E400603993 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95EFEB7D324E1A71F8932C65 /* Pods-PlatziFinanzas.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69RRCEKXZC;
@@ -665,43 +781,64 @@
 			};
 			name = Release;
 		};
-		9F449FD7219C5E2D0050784B /* Debug */ = {
+		9F330CE521BEA06C003FB69E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Production.entitlements;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 69RRCEKXZC;
-				INFOPLIST_FILE = "PlatziFinanzas copy-Info.plist";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PlatziFinanzasCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.platzi.PlatziFinanzas;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.platzi.PlatziFinanzasCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		9F449FD8219C5E2D0050784B /* Release */ = {
+		9F330CE621BEA06C003FB69E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Production.entitlements;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 69RRCEKXZC;
-				INFOPLIST_FILE = "PlatziFinanzas copy-Info.plist";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PlatziFinanzasCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.platzi.PlatziFinanzas;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.platzi.PlatziFinanzasCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -726,11 +863,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9F449FD6219C5E2D0050784B /* Build configuration list for PBXNativeTarget "Production" */ = {
+		9F330CE421BEA06C003FB69E /* Build configuration list for PBXNativeTarget "PlatziFinanzasCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9F449FD7219C5E2D0050784B /* Debug */,
-				9F449FD8219C5E2D0050784B /* Release */,
+				9F330CE521BEA06C003FB69E /* Debug */,
+				9F330CE621BEA06C003FB69E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
