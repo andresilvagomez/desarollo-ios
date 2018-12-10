@@ -18,6 +18,8 @@ class TransactionsViewController: UIViewController {
         }
         return view
     }()
+    
+    private var viewModel = TransactionsViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,7 @@ extension TransactionsViewController: UITableViewDelegate {
 
 extension TransactionsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let count = 10
+        let count = viewModel.numberOfitems
         tableView.backgroundView = count == 0 ? emptyStateView : nil
         tableView.separatorStyle = count == 0 ? .none : .singleLine
         return count
