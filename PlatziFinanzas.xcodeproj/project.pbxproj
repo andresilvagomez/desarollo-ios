@@ -19,6 +19,8 @@
 		9F09811621BEFEEA00AEEDC9 /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F09811521BEFEEA00AEEDC9 /* TransactionsViewModel.swift */; };
 		9F09811821BF06AF00AEEDC9 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F09811721BF06AF00AEEDC9 /* AddViewController.swift */; };
 		9F09811A21BF06BF00AEEDC9 /* AddTransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F09811921BF06BF00AEEDC9 /* AddTransactionsViewModel.swift */; };
+		9F09811C21BF0BE600AEEDC9 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F09811B21BF0BE600AEEDC9 /* TransactionTableViewCell.swift */; };
+		9F09811E21BF0CF300AEEDC9 /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F09811D21BF0CF300AEEDC9 /* Numeric.swift */; };
 		9F330CDF21BEA06C003FB69E /* PlatziFinanzasCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F330CDD21BEA06C003FB69E /* PlatziFinanzasCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F330CE221BEA06C003FB69E /* PlatziFinanzasCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F330CDB21BEA06C003FB69E /* PlatziFinanzasCore.framework */; };
 		9F330CE321BEA06C003FB69E /* PlatziFinanzasCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F330CDB21BEA06C003FB69E /* PlatziFinanzasCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -96,6 +98,8 @@
 		9F09811521BEFEEA00AEEDC9 /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
 		9F09811721BF06AF00AEEDC9 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		9F09811921BF06BF00AEEDC9 /* AddTransactionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTransactionsViewModel.swift; sourceTree = "<group>"; };
+		9F09811B21BF0BE600AEEDC9 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		9F09811D21BF0CF300AEEDC9 /* Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
 		9F330CDB21BEA06C003FB69E /* PlatziFinanzasCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlatziFinanzasCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F330CDD21BEA06C003FB69E /* PlatziFinanzasCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatziFinanzasCore.h; sourceTree = "<group>"; };
 		9F330CDE21BEA06C003FB69E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -313,6 +317,7 @@
 				9FE368C6219CCB3100606E29 /* EmptyState.xib */,
 				9FE368CC219DAD5E00606E29 /* TransactionsCell.xib */,
 				9F09811521BEFEEA00AEEDC9 /* TransactionsViewModel.swift */,
+				9F09811B21BF0BE600AEEDC9 /* TransactionTableViewCell.swift */,
 			);
 			path = Transactions;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				9F62FD23219C914700A83344 /* Shadow.swift */,
+				9F09811D21BF0CF300AEEDC9 /* Numeric.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -631,6 +637,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F62FD30219CC47100A83344 /* TransactionsViewController.swift in Sources */,
+				9F09811C21BF0BE600AEEDC9 /* TransactionTableViewCell.swift in Sources */,
 				9F62FD24219C914700A83344 /* Shadow.swift in Sources */,
 				9F62FD2E219CB4FA00A83344 /* OnBoardingStepsViewController.swift in Sources */,
 				9F03432F219C57E300603993 /* AppDelegate.swift in Sources */,
@@ -640,6 +647,7 @@
 				9F62FD2A219CB19D00A83344 /* OnBoardingContainerViewController.swift in Sources */,
 				9F09811621BEFEEA00AEEDC9 /* TransactionsViewModel.swift in Sources */,
 				9F62FD2C219CB23100A83344 /* OnBoardingViewController.swift in Sources */,
+				9F09811E21BF0CF300AEEDC9 /* Numeric.swift in Sources */,
 				9F330CF421BEB95E003FB69E /* SignInViewModel.swift in Sources */,
 				9F330CF221BEAF34003FB69E /* SignInViewController.swift in Sources */,
 				9F09811821BF06AF00AEEDC9 /* AddViewController.swift in Sources */,

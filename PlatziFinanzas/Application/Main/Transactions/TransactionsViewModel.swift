@@ -10,6 +10,10 @@ import Foundation
 import FirebaseFirestore
 import PlatziFinanzasCore
 
+protocol TransactionsViewModelDelegate {
+    func reloadData()
+}
+
 class TransactionsViewModel {
     private var items: [PlatziFinanzasCore.Transaction] = []
     
@@ -26,8 +30,14 @@ class TransactionsViewModel {
         return items.count
     }
     
+    var delegate: TransactionsViewModelDelegate?
+    
     init() {
-        db.collection("transactions").getDocuments { (snapshot, error) in
+        db.collection("transactions").getDocuments { [weak self] (
+            snapshot, error) in
+            
+            guard let self = self else { return }
+            
             if let error = error {
                 print(error.localizedDescription)
                 return
@@ -45,6 +55,43 @@ class TransactionsViewModel {
                 
                 self.items.append(transaction)
             })
+            
+            self.delegate?.reloadData()
         }
+    }
+    
+    func item(at indexPath: IndexPath) -> TransactionViewModel {
+        return TransactionViewModel(transaction: items[indexPath.row])
+    }
+}
+
+
+class TransactionViewModel {
+    private var transaction: PlatziFinanzasCore.Transaction
+    
+    var name: String {
+        return transaction.name
+    }
+    
+    var value: String {
+        return transaction.value.currency()
+    }
+    
+    var date: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy"
+        formatter.timeZone = TimeZone.current
+        return formatter.string(from: transaction.date)
+    }
+
+    var time: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh:mm"
+        formatter.timeZone = TimeZone.current
+        return formatter.string(from: transaction.date)
+    }
+    
+    init(transaction: PlatziFinanzasCore.Transaction) {
+        self.transaction = transaction
     }
 }

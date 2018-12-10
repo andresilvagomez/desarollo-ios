@@ -7,11 +7,11 @@ public enum TransactionCategory: Int {
 extension TransactionCategory: Codable {  }
 
 public class Transaction: Codable {
-    var uuid = UUID()
-    var value: Float
-    var category: TransactionCategory
-    var name: String
-    var date: Date
+    public var uuid = UUID()
+    public var value: Float
+    public var category: TransactionCategory
+    public var name: String
+    public var date: Date
     
     enum CondingKeys: String, CodingKey {
         case uuid

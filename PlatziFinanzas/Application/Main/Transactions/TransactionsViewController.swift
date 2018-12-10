@@ -24,8 +24,16 @@ class TransactionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.delegate = self
+        
         let cell = UINib(nibName: "TransactionsCell", bundle: Bundle.main)
         tableView.register(cell, forCellReuseIdentifier: "cell")
+    }
+}
+
+extension TransactionsViewController: TransactionsViewModelDelegate {
+    func reloadData() {
+        tableView.reloadData()
     }
 }
 
@@ -42,6 +50,11 @@ extension TransactionsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TransactionTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        cell.viewModel = viewModel.item(at: indexPath)
+        return cell
     }
 }
