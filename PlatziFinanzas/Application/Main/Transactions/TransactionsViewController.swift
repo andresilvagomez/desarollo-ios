@@ -38,7 +38,22 @@ extension TransactionsViewController: TransactionsViewModelDelegate {
 }
 
 extension TransactionsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            viewModel.remove(at: indexPath)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
     
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { [weak self] (action, index) in
+            self?.viewModel.remove(at: index)
+            tableView.deleteRows(at: [index], with: .fade)
+        }
+        
+        return [delete]
+    }
 }
 
 extension TransactionsViewController: UITableViewDataSource {
