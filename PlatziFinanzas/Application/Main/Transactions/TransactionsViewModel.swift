@@ -33,7 +33,7 @@ class TransactionsViewModel {
     var delegate: TransactionsViewModelDelegate?
     
     init() {
-        db.collection("transactions").getDocuments { [weak self] (
+        db.collection("transactions").order(by: "date", descending: true).addSnapshotListener { [weak self] (
             snapshot, error) in
             
             guard let self = self else { return }
@@ -53,6 +53,7 @@ class TransactionsViewModel {
                     return
                 }
                 
+                transaction.firebaseId = snapshot.documentID
                 self.items.append(transaction)
             })
             

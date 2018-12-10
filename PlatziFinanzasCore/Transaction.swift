@@ -7,6 +7,7 @@ public enum TransactionCategory: Int {
 extension TransactionCategory: Codable {  }
 
 public class Transaction: Codable {
+    public var firebaseId: String?
     public var uuid = UUID()
     public var value: Float
     public var category: TransactionCategory
