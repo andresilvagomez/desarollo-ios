@@ -1,15 +1,25 @@
 import Foundation
 
-public enum TransactionCategory {
+public enum TransactionCategory: Int {
     case earn, expend
 }
 
-public class Transaction {
+extension TransactionCategory: Codable {  }
+
+public class Transaction: Codable {
     var uuid = UUID()
     var value: Float
     var category: TransactionCategory
     var name: String
     var date: Date
+    
+    enum CondingKeys: String, CodingKey {
+        case uuid
+        case value
+        case category
+        case name
+        case date
+    }
     
     public init(value: Float, category: TransactionCategory, name: String, date: Date) {
         self.value = value
@@ -18,9 +28,19 @@ public class Transaction {
         self.date = date
     }
     
+    public required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CondingKeys.self)
+        
+        uuid = try container.decode(UUID.self, forKey: .uuid)
+        value = try container.decode(Float.self, forKey: .value)
+        category = try container.decode(TransactionCategory.self, forKey: .category)
+        name = try container.decode(String.self, forKey: .name)
+        date = try container.decode(Date.self, forKey: .date)
+    }
+    
     public func data() -> [String: Any]? {
         let jsonEncoder = JSONEncoder()
-        guard let data = try jsonEncoder.encode(self) else {
+        guard let data = try? jsonEncoder.encode(self) else {
             return nil
         }
         
@@ -33,6 +53,10 @@ public class Transaction {
 }
 
 extension Transaction: Hashable {
+    public static func == (lhs: Transaction, rhs: Transaction) -> Bool {
+        return lhs.uuid == rhs.uuid
+    }
+    
     public var hashValue: Int {
         return uuid.hashValue
     }
