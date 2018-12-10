@@ -1,4 +1,5 @@
 PODS:
+  - AccountKit (4.35.0)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -137,9 +138,10 @@ PODS:
   - Protobuf (3.6.1)
 
 DEPENDENCIES:
+  - AccountKit
   - Crashlytics
   - Fabric
-  - FBSDKLoginKit (= 4.38)
+  - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
@@ -148,6 +150,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AccountKit
     - Bolts
     - BoringSSL
     - Crashlytics
@@ -175,6 +178,7 @@ SPEC REPOS:
     - Protobuf
 
 SPEC CHECKSUMS:
+  AccountKit: 870ccaf5d33facda9408783e28fbe68c5211e069
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL: e10f92a27043805c01071fe815a5cd98ae8212e7
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
@@ -201,6 +205,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
-PODFILE CHECKSUM: 7806d4c745fcba9f1bea11ed088bde9a07b35a06
+PODFILE CHECKSUM: dbcc249566822faa6b753b35edf9d8525e1ea4e7
 
 COCOAPODS: 1.6.0.beta.2

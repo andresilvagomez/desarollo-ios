@@ -13,10 +13,16 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    private var viewModel = SignInViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        viewModel.authAccountKit(sender: self) { (success, error) in
+            
+        }
     }
     
     @IBAction func signIn(_ sender: Any) {

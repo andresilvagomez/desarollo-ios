@@ -15,4 +15,5 @@ target 'PlatziFinanzas' do
   pod 'Firebase/InAppMessagingDisplay'
   
   pod 'FBSDKLoginKit'
+  pod 'AccountKit'
 end

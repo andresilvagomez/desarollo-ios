@@ -25,6 +25,7 @@
 			<array>
                 <string>twitterkit-F3tdZypShbk5Anff3WMnfNb3f</string>
 				<string>fb269510947024436</string>
+                <string>ak269510947024436</string>
 			</array>
 		</dict>
 	</array>
@@ -62,5 +63,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>AccountKitClientToken</key>
+    <string>de03bdf30da110171bb2dc6e777c2759</string>
 </dict>
 </plist>

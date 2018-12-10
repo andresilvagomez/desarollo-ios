@@ -10,10 +10,12 @@ import Foundation
 import FirebaseAuth
 import FBSDKLoginKit
 import TwitterKit
+import AccountKit
 
 typealias SignInHandler = ( (_ success: Bool, _ error: Error?) -> Void )
 
-class SignInViewModel {
+class SignInViewModel: NSObject {
+    private var handler: SignInHandler?
 
     static func signInWith(email: String?, password: String?, handler: SignInHandler?) {
         guard let email = email,
@@ -68,7 +70,6 @@ class SignInViewModel {
         }
     }
     
-    
     static func authWithTwitter(handler: SignInHandler?) {
         TWTRTwitter.sharedInstance().logIn { (session, error) in
             guard let session = session else {
@@ -89,6 +90,38 @@ class SignInViewModel {
                 
                 handler?(true, nil)
             })
+        }
+    }
+    
+    func authAccountKit(sender: UIViewController, handler: SignInHandler?) {
+        self.handler = handler
+        let viewController = AKFAccountKit(responseType: .accessToken).viewControllerForPhoneLogin() as AKFViewController
+        viewController.delegate = self
+        
+        guard let normalViewController = viewController as? UIViewController else {
+            return
+        }
+        
+        sender.present(normalViewController, animated: true, completion: nil)
+    }
+}
+
+extension SignInViewModel: AKFViewControllerDelegate {
+    func viewController(
+        _ viewController: (UIViewController & AKFViewController)!,
+        didCompleteLoginWith accessToken: AKFAccessToken!,
+        state: String!) {
+        let token = accessToken.tokenString
+        
+        let accountKit = AKFAccountKit(responseType: .accessToken)
+        accountKit.requestAccount { [weak self] (account, error) in
+            if let error = error {
+                self?.handler?(false, error)
+                return
+            }
+            
+            guard let phoneNumber = account?.phoneNumber?.phoneNumber else { return }
+            self?.handler?(true, nil)
         }
     }
 }
