@@ -16,7 +16,7 @@ PODS:
   - Fabric (1.9.0)
   - FBSDKCoreKit (4.39.0):
     - Bolts (~> 1.9)
-  - FBSDKLoginKit (4.39.0):
+  - FBSDKLoginKit (4.38.0):
     - FBSDKCoreKit
   - Firebase/Auth (5.14.0):
     - Firebase/CoreOnly
@@ -139,7 +139,7 @@ PODS:
 DEPENDENCIES:
   - Crashlytics
   - Fabric
-  - FBSDKLoginKit
+  - FBSDKLoginKit (= 4.38)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
@@ -180,7 +180,7 @@ SPEC CHECKSUMS:
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
   Fabric: f988e33c97f08930a413e08123064d2e5f68d655
   FBSDKCoreKit: 1e3981faefab8c88edfaa9eecd94aab02d99a9bc
-  FBSDKLoginKit: 30ba5039a2c53d65a75103889bc2deebdacd5a1f
+  FBSDKLoginKit: 634fa27e72e33620eb6389253337342c03d4a407
   Firebase: 963d5685fae888a56d6d4d9cfce6b9c976958798
   FirebaseAnalytics: c06f9d70577d79074214700a71fd5d39de5550fb
   FirebaseAnalyticsInterop: e5f21be9af6548372e2f0815834ff909bff395a2
@@ -201,6 +201,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
-PODFILE CHECKSUM: 36aff166e0791f04a4c06540616134b2acd14481
+PODFILE CHECKSUM: 7806d4c745fcba9f1bea11ed088bde9a07b35a06
 
 COCOAPODS: 1.6.0.beta.2
