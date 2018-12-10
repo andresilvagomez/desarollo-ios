@@ -21,6 +21,7 @@
 		9F330CEE21BEA088003FB69E /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F330CEA21BEA088003FB69E /* Budget.swift */; };
 		9F330CF021BEAD04003FB69E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F330CEF21BEAD04003FB69E /* GoogleService-Info.plist */; };
 		9F330CF221BEAF34003FB69E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F330CF121BEAF34003FB69E /* SignInViewController.swift */; };
+		9F330CF421BEB95E003FB69E /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F330CF321BEB95E003FB69E /* SignInViewModel.swift */; };
 		9F62FD24219C914700A83344 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F62FD23219C914700A83344 /* Shadow.swift */; };
 		9F62FD28219CAEE500A83344 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F62FD27219CAEE500A83344 /* OnBoarding.storyboard */; };
 		9F62FD2A219CB19D00A83344 /* OnBoardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F62FD29219CB19D00A83344 /* OnBoardingContainerViewController.swift */; };
@@ -90,6 +91,7 @@
 		9F330CEA21BEA088003FB69E /* Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		9F330CEF21BEAD04003FB69E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F330CF121BEAF34003FB69E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		9F330CF321BEB95E003FB69E /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		9F449FDB219C5E740050784B /* Production.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Production.entitlements; sourceTree = "<group>"; };
 		9F449FDD219C5E830050784B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9F62FD23219C914700A83344 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 			children = (
 				9FDFDF12219C6F4A00CD505D /* SignIn.storyboard */,
 				9F330CF121BEAF34003FB69E /* SignInViewController.swift */,
+				9F330CF321BEB95E003FB69E /* SignInViewModel.swift */,
 			);
 			path = "Sign In";
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				9FE368CB219DAA7400606E29 /* TabBarViewController.swift in Sources */,
 				9F62FD2A219CB19D00A83344 /* OnBoardingContainerViewController.swift in Sources */,
 				9F62FD2C219CB23100A83344 /* OnBoardingViewController.swift in Sources */,
+				9F330CF421BEB95E003FB69E /* SignInViewModel.swift in Sources */,
 				9F330CF221BEAF34003FB69E /* SignInViewController.swift in Sources */,
 				9FE368CF219DADCA00606E29 /* BudgetViewController.swift in Sources */,
 			);
