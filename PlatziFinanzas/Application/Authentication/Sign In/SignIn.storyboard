@@ -173,7 +173,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="signIn:" destination="kMW-HX-DTW" eventType="touchUpInside" id="RNJ-bt-Thb"/>
-                                            <segue destination="xot-u3-Aob" kind="presentation" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="xAx-sJ-C2q"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -216,6 +215,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="oog-lV-NiC" id="RSs-86-RG6"/>
                         <outlet property="passwordTextField" destination="bP2-vK-jm9" id="83J-rt-eDX"/>
+                        <segue destination="xot-u3-Aob" kind="modal" identifier="goToMain" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="xck-vM-aAF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zx-xn-Skb" userLabel="First Responder" sceneMemberID="firstResponder"/>
