@@ -102,7 +102,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="bUu-IJ-o9a" kind="presentation" identifier="" id="Xly-Ra-buK"/>
+                                    <segue destination="bUu-IJ-o9a" kind="presentation" identifier="goToSignIn" id="Xly-Ra-buK"/>
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="dgm-ye-m1i">
