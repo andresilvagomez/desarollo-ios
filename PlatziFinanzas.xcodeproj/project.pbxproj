@@ -19,6 +19,7 @@
 		9F330CEC21BEA088003FB69E /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F330CE821BEA088003FB69E /* Account.swift */; };
 		9F330CED21BEA088003FB69E /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F330CE921BEA088003FB69E /* Transaction.swift */; };
 		9F330CEE21BEA088003FB69E /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F330CEA21BEA088003FB69E /* Budget.swift */; };
+		9F330CF021BEAD04003FB69E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F330CEF21BEAD04003FB69E /* GoogleService-Info.plist */; };
 		9F62FD24219C914700A83344 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F62FD23219C914700A83344 /* Shadow.swift */; };
 		9F62FD28219CAEE500A83344 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F62FD27219CAEE500A83344 /* OnBoarding.storyboard */; };
 		9F62FD2A219CB19D00A83344 /* OnBoardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F62FD29219CB19D00A83344 /* OnBoardingContainerViewController.swift */; };
@@ -86,6 +87,7 @@
 		9F330CE821BEA088003FB69E /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		9F330CE921BEA088003FB69E /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		9F330CEA21BEA088003FB69E /* Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		9F330CEF21BEAD04003FB69E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F449FDB219C5E740050784B /* Production.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Production.entitlements; sourceTree = "<group>"; };
 		9F449FDD219C5E830050784B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9F62FD23219C914700A83344 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 		9F449FE1219C601C0050784B /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				9F330CEF21BEAD04003FB69E /* GoogleService-Info.plist */,
 				9F03432E219C57E300603993 /* AppDelegate.swift */,
 				9F03433A219C57E400603993 /* Info.plist */,
 				9F034337219C57E400603993 /* LaunchScreen.storyboard */,
@@ -467,6 +470,7 @@
 				9FE368CD219DAD5E00606E29 /* TransactionsCell.xib in Resources */,
 				9F034334219C57E300603993 /* Main.storyboard in Resources */,
 				9FCF77A4219DD59C00BCF51B /* day_of_the_dead_skull.json in Resources */,
+				9F330CF021BEAD04003FB69E /* GoogleService-Info.plist in Resources */,
 				9FDFDF0B219C6D9E00CD505D /* Statistics.storyboard in Resources */,
 				9FDFDF05219C6CD500CD505D /* Transactions.storyboard in Resources */,
 				9FCF77A0219DD4FA00BCF51B /* Lottie.storyboard in Resources */,

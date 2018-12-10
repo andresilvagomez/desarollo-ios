@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
+        
+        initialViewController()
+        
+        return true
+    }
+    
+    func initialViewController() {
         let onboaring = UserDefaults.standard.value(forKey: "WatchedOnboarding") as? Bool ?? false
         
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -30,8 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
-        
-        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
