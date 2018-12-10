@@ -19,8 +19,11 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
+                <string>twitterkit-F3tdZypShbk5Anff3WMnfNb3f</string>
 				<string>fb269510947024436</string>
 			</array>
 		</dict>
@@ -37,6 +40,8 @@
 		<string>fbapi</string>
 		<string>fb-messenger-share-api</string>
 		<string>fbshareextension</string>
+        <string>twitter</string>
+        <string>twitterauth</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

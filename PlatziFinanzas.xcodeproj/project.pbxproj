@@ -12,6 +12,10 @@
 		9F034334219C57E300603993 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F034332219C57E300603993 /* Main.storyboard */; };
 		9F034336219C57E400603993 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F034335219C57E400603993 /* Assets.xcassets */; };
 		9F034339219C57E400603993 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F034337219C57E400603993 /* LaunchScreen.storyboard */; };
+		9F09810F21BED25900AEEDC9 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F09810D21BED25900AEEDC9 /* TwitterCore.framework */; };
+		9F09811221BED25E00AEEDC9 /* TwitterCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F09810D21BED25900AEEDC9 /* TwitterCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F09811321BED25E00AEEDC9 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F09810E21BED25900AEEDC9 /* TwitterKit.framework */; };
+		9F09811421BED25E00AEEDC9 /* TwitterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F09810E21BED25900AEEDC9 /* TwitterKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F330CDF21BEA06C003FB69E /* PlatziFinanzasCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F330CDD21BEA06C003FB69E /* PlatziFinanzasCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F330CE221BEA06C003FB69E /* PlatziFinanzasCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F330CDB21BEA06C003FB69E /* PlatziFinanzasCore.framework */; };
 		9F330CE321BEA06C003FB69E /* PlatziFinanzasCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F330CDB21BEA06C003FB69E /* PlatziFinanzasCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -65,7 +69,9 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9FB0621A219DD18F00EEB1A9 /* Lottie.framework in Embed Frameworks */,
+				9F09811221BED25E00AEEDC9 /* TwitterCore.framework in Embed Frameworks */,
 				9F330CE321BEA06C003FB69E /* PlatziFinanzasCore.framework in Embed Frameworks */,
+				9F09811421BED25E00AEEDC9 /* TwitterKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +88,8 @@
 		9F034335219C57E400603993 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F034338219C57E400603993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F03433A219C57E400603993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F09810D21BED25900AEEDC9 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = Carthage/Build/iOS/TwitterCore.framework; sourceTree = "<group>"; };
+		9F09810E21BED25900AEEDC9 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = Carthage/Build/iOS/TwitterKit.framework; sourceTree = "<group>"; };
 		9F330CDB21BEA06C003FB69E /* PlatziFinanzasCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlatziFinanzasCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F330CDD21BEA06C003FB69E /* PlatziFinanzasCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatziFinanzasCore.h; sourceTree = "<group>"; };
 		9F330CDE21BEA06C003FB69E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,9 +132,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F09810F21BED25900AEEDC9 /* TwitterCore.framework in Frameworks */,
 				9FB06218219DD18800EEB1A9 /* Lottie.framework in Frameworks */,
 				9F330CE221BEA06C003FB69E /* PlatziFinanzasCore.framework in Frameworks */,
 				96AB7471D990BCD2A1596732 /* Pods_PlatziFinanzas.framework in Frameworks */,
+				9F09811321BED25E00AEEDC9 /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +208,8 @@
 		9F449FDC219C5E830050784B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F09810D21BED25900AEEDC9 /* TwitterCore.framework */,
+				9F09810E21BED25900AEEDC9 /* TwitterKit.framework */,
 				9FB06217219DD18800EEB1A9 /* Lottie.framework */,
 				9F449FDD219C5E830050784B /* MapKit.framework */,
 				56A4FD28EE359557E1B982A0 /* Pods_PlatziFinanzas.framework */,
@@ -804,6 +816,93 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"FIRAnalyticsConnector\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseFirestore\"",
+					"-framework",
+					"\"FirebaseInAppMessaging\"",
+					"-framework",
+					"\"FirebaseInAppMessagingDisplay\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseMessaging\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Protobuf\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"grpc\"",
+					"-framework",
+					"\"grpcpp\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+					"-framework",
+					"\"openssl\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"AudioToolbox\"",
+					"-weak_framework",
+					"\"CoreGraphics\"",
+					"-weak_framework",
+					"\"CoreLocation\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"QuartzCore\"",
+					"-weak_framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Social\"",
+					"-weak_framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.platzi.PlatziFinanzas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -828,6 +927,93 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"FIRAnalyticsConnector\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseFirestore\"",
+					"-framework",
+					"\"FirebaseInAppMessaging\"",
+					"-framework",
+					"\"FirebaseInAppMessagingDisplay\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseMessaging\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Protobuf\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"grpc\"",
+					"-framework",
+					"\"grpcpp\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+					"-framework",
+					"\"openssl\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"AudioToolbox\"",
+					"-weak_framework",
+					"\"CoreGraphics\"",
+					"-weak_framework",
+					"\"CoreLocation\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"QuartzCore\"",
+					"-weak_framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Social\"",
+					"-weak_framework",
+					"\"UIKit\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.platzi.PlatziFinanzas;
 				PRODUCT_NAME = "$(TARGET_NAME)";

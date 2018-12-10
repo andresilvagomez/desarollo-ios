@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseAuth
 import FBSDKLoginKit
+import TwitterKit
 
 typealias SignInHandler = ( (_ success: Bool, _ error: Error?) -> Void )
 
@@ -58,6 +59,30 @@ class SignInViewModel {
             
             Auth.auth().signInAndRetrieveData(with: credentials, completion: { (authResult, authError) in
                 if let authError = authError {
+                    handler?(false, error)
+                    return
+                }
+                
+                handler?(true, nil)
+            })
+        }
+    }
+    
+    
+    static func authWithTwitter(handler: SignInHandler?) {
+        TWTRTwitter.sharedInstance().logIn { (session, error) in
+            guard let session = session else {
+                handler?(false, nil)
+                return
+            }
+            
+            let authToken = session.authToken
+            let authSecret = session.authTokenSecret
+            
+            let creadentials = TwitterAuthProvider.credential(withToken: authToken, secret: authSecret)
+            
+            Auth.auth().signInAndRetrieveData(with: creadentials, completion: { (result, error) in
+                if let error = error {
                     handler?(false, error)
                     return
                 }

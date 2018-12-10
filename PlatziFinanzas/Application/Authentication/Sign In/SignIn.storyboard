@@ -117,6 +117,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="authWithTwitter:" destination="kMW-HX-DTW" eventType="touchUpInside" id="bcv-Y3-FiX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
