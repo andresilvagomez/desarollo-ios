@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="Tps-01-4sv">
             <objects>
-                <viewController id="kMW-HX-DTW" sceneMemberID="viewController">
+                <viewController id="kMW-HX-DTW" customClass="SignInViewController" customModule="PlatziFinanzas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i0L-QN-PGA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +137,7 @@
                                         <rect key="frame" x="20" y="70" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qum-qb-FV0">
                                         <rect key="frame" x="303" y="108" width="91" height="29"/>
@@ -172,6 +172,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="signIn:" destination="kMW-HX-DTW" eventType="touchUpInside" id="RNJ-bt-Thb"/>
                                             <segue destination="xot-u3-Aob" kind="presentation" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="xAx-sJ-C2q"/>
                                         </connections>
                                     </button>
@@ -212,6 +213,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bwF-Wi-HcH"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="oog-lV-NiC" id="RSs-86-RG6"/>
+                        <outlet property="passwordTextField" destination="bP2-vK-jm9" id="83J-rt-eDX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zx-xn-Skb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
