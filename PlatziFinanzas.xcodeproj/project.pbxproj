@@ -48,6 +48,8 @@
 		9FE096C321C0232900E08496 /* FacebookLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE096BC21C0231C00E08496 /* FacebookLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9FE096C521C0232900E08496 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE096BA21C0231700E08496 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9FE096C721C0232900E08496 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE096B821C0231400E08496 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FE096C921C026AC00E08496 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE096C821C026AC00E08496 /* Bolts.framework */; };
+		9FE096CB21C026B000E08496 /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE096C821C026AC00E08496 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9FE368C7219CCB3100606E29 /* EmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FE368C6219CCB3100606E29 /* EmptyState.xib */; };
 		9FE368CB219DAA7400606E29 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE368CA219DAA7400606E29 /* TabBarViewController.swift */; };
 		9FE368CD219DAD5E00606E29 /* TransactionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FE368CC219DAD5E00606E29 /* TransactionsCell.xib */; };
@@ -78,6 +80,7 @@
 				9FB0621A219DD18F00EEB1A9 /* Lottie.framework in Embed Frameworks */,
 				9FE096C321C0232900E08496 /* FacebookLogin.framework in Embed Frameworks */,
 				9F330CE321BEA06C003FB69E /* PlatziFinanzasCore.framework in Embed Frameworks */,
+				9FE096CB21C026B000E08496 /* Bolts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +130,7 @@
 		9FE096BA21C0231700E08496 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Carthage/Build/iOS/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		9FE096BC21C0231C00E08496 /* FacebookLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookLogin.framework; path = Carthage/Build/iOS/FacebookLogin.framework; sourceTree = "<group>"; };
 		9FE096BE21C0232000E08496 /* FacebookCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookCore.framework; path = Carthage/Build/iOS/FacebookCore.framework; sourceTree = "<group>"; };
+		9FE096C821C026AC00E08496 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
 		9FE368C6219CCB3100606E29 /* EmptyState.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyState.xib; sourceTree = "<group>"; };
 		9FE368CA219DAA7400606E29 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		9FE368CC219DAD5E00606E29 /* TransactionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionsCell.xib; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 				9FB06218219DD18800EEB1A9 /* Lottie.framework in Frameworks */,
 				9F330CE221BEA06C003FB69E /* PlatziFinanzasCore.framework in Frameworks */,
 				9FE096C221C0232900E08496 /* FacebookLogin.framework in Frameworks */,
+				9FE096C921C026AC00E08496 /* Bolts.framework in Frameworks */,
 				96AB7471D990BCD2A1596732 /* Pods_PlatziFinanzas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +223,7 @@
 		9F449FDC219C5E830050784B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FE096C821C026AC00E08496 /* Bolts.framework */,
 				9FE096BE21C0232000E08496 /* FacebookCore.framework */,
 				9FE096BC21C0231C00E08496 /* FacebookLogin.framework */,
 				9FE096BA21C0231700E08496 /* FBSDKCoreKit.framework */,
