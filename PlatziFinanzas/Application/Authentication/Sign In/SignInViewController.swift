@@ -20,9 +20,9 @@ class SignInViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        viewModel.authAccountKit(sender: self) { (success, error) in
-            
-        }
+//        viewModel.authAccountKit(sender: self) { (success, error) in
+//            
+//        }
     }
     
     @IBAction func signIn(_ sender: Any) {

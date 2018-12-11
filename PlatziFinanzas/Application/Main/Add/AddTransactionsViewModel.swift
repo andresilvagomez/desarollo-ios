@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseFirestore
 import PlatziFinanzasCore
+import FirebaseAuth
 
 class AddTransactionsViewModel {
     private var db: Firestore {
@@ -20,6 +21,10 @@ class AddTransactionsViewModel {
             return
         }
         
+        guard let uid = Auth.auth().currentUser?.uid else {
+            return
+        }
+        
         let transaction = PlatziFinanzasCore.Transaction(
             value: value,
             category: .expend,
@@ -27,10 +32,14 @@ class AddTransactionsViewModel {
             date: Date()
         )
         
-        guard let data = transaction.data() else {
+        guard var data = transaction.data() else {
             return
         }
         
-        db.collection("transactions").addDocument(data: data)
+        data["ownerId"] = uid
+        db.collection("transactions").addDocument(data: data) { (error) in
+            print(error?.localizedDescription ?? "Object added")
+            NotificationCenter.default.post(name: Notification.Name("AddedNewData"), object: nil)
+        }
     }
 }

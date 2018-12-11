@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        try? Auth.auth().signOut()
+//        try? Auth.auth().signOut()
         
         initialViewController()
         
