@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        let _ = LocalNotificationsController()
+        
         TWTRTwitter.sharedInstance().start(
             withConsumerKey: "F3tdZypShbk5Anff3WMnfNb3f",
             consumerSecret: "P2HuN88TqSFvqzokz5Xm7MYVlwR0Zaf2G8LnFMRdNCgOYZ54yC"

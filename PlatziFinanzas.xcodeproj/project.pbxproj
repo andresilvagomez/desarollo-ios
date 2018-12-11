@@ -37,6 +37,7 @@
 		9F62FD2C219CB23100A83344 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F62FD2B219CB23100A83344 /* OnBoardingViewController.swift */; };
 		9F62FD2E219CB4FA00A83344 /* OnBoardingStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F62FD2D219CB4FA00A83344 /* OnBoardingStepsViewController.swift */; };
 		9F62FD30219CC47100A83344 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F62FD2F219CC47100A83344 /* TransactionsViewController.swift */; };
+		9F96A3ED21BFFE56004ADCE3 /* LocalNotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96A3EC21BFFE56004ADCE3 /* LocalNotificationsController.swift */; };
 		9FB06216219DD12F00EEB1A9 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 9FB06215219DD12F00EEB1A9 /* Cartfile */; };
 		9FB06218219DD18800EEB1A9 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB06217219DD18800EEB1A9 /* Lottie.framework */; };
 		9FB0621A219DD18F00EEB1A9 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB06217219DD18800EEB1A9 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -118,6 +119,7 @@
 		9F62FD2B219CB23100A83344 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		9F62FD2D219CB4FA00A83344 /* OnBoardingStepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingStepsViewController.swift; sourceTree = "<group>"; };
 		9F62FD2F219CC47100A83344 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		9F96A3EC21BFFE56004ADCE3 /* LocalNotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsController.swift; sourceTree = "<group>"; };
 		9FB06215219DD12F00EEB1A9 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		9FB06217219DD18800EEB1A9 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		9FCF779F219DD4FA00BCF51B /* Lottie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lottie.storyboard; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		9F03432D219C57E300603993 /* PlatziFinanzas */ = {
 			isa = PBXGroup;
 			children = (
+				9F96A3EB21BFFE46004ADCE3 /* Controllers */,
 				9F62FD22219C913100A83344 /* Extensions */,
 				9F449FE2219C60410050784B /* Resources */,
 				9F449FE1219C601C0050784B /* Base */,
@@ -348,6 +351,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		9F96A3EB21BFFE46004ADCE3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F96A3EC21BFFE56004ADCE3 /* LocalNotificationsController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		9FCF779E219DD4E800BCF51B /* Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +430,7 @@
 				9FB0621D219DD1E600EEB1A9 /* ShellScript */,
 				AF37DB70EA7010CA4CBDD6BF /* [CP] Embed Pods Frameworks */,
 				E4D4FEF0A9D2EA9B11D8B476 /* [CP] Copy Pods Resources */,
+				9F96A3EA21BFFB49004ADCE3 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -521,6 +533,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		9F96A3EA21BFFB49004ADCE3 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Fabric;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+		};
 		9FB0621D219DD1E600EEB1A9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -647,6 +678,7 @@
 				9F62FD2A219CB19D00A83344 /* OnBoardingContainerViewController.swift in Sources */,
 				9F09811621BEFEEA00AEEDC9 /* TransactionsViewModel.swift in Sources */,
 				9F62FD2C219CB23100A83344 /* OnBoardingViewController.swift in Sources */,
+				9F96A3ED21BFFE56004ADCE3 /* LocalNotificationsController.swift in Sources */,
 				9F09811E21BF0CF300AEEDC9 /* Numeric.swift in Sources */,
 				9F330CF421BEB95E003FB69E /* SignInViewModel.swift in Sources */,
 				9F330CF221BEAF34003FB69E /* SignInViewController.swift in Sources */,
