@@ -925,7 +925,7 @@
 					"-weak_framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.platzi.PlatziFinanzas;
+				PRODUCT_BUNDLE_IDENTIFIER = com.platzi.PlatziFinanzas5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1037,7 +1037,7 @@
 					"-weak_framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.platzi.PlatziFinanzas;
+				PRODUCT_BUNDLE_IDENTIFIER = com.platzi.PlatziFinanzas5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -33,8 +33,7 @@ class TransactionsViewModel {
     var delegate: TransactionsViewModelDelegate?
     
     init() {
-        db.collection("transactions").order(by: "date", descending: true).addSnapshotListener { [weak self] (
-            snapshot, error) in
+        db.collection("transactions").order(by: "date", descending: true).addSnapshotListener { [weak self] (snapshot, error) in
             
             guard let self = self else { return }
             

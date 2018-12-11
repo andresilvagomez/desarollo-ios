@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AccountKitClientToken</key>
+	<string>de03bdf30da110171bb2dc6e777c2759</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -19,13 +21,13 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-            <key>CFBundleTypeRole</key>
-            <string>Editor</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-                <string>twitterkit-F3tdZypShbk5Anff3WMnfNb3f</string>
+				<string>twitterkit-F3tdZypShbk5Anff3WMnfNb3f</string>
 				<string>fb269510947024436</string>
-                <string>ak269510947024436</string>
+				<string>ak269510947024436</string>
 			</array>
 		</dict>
 	</array>
@@ -41,11 +43,16 @@
 		<string>fbapi</string>
 		<string>fb-messenger-share-api</string>
 		<string>fbshareextension</string>
-        <string>twitter</string>
-        <string>twitterauth</string>
+		<string>twitter</string>
+		<string>twitterauth</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -63,7 +70,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>AccountKitClientToken</key>
-    <string>de03bdf30da110171bb2dc6e777c2759</string>
 </dict>
 </plist>
