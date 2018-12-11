@@ -17,10 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    private var notifications: PushNotificationsController!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         let _ = LocalNotificationsController()
+        notifications = PushNotificationsController(application: application)
         
         TWTRTwitter.sharedInstance().start(
             withConsumerKey: "F3tdZypShbk5Anff3WMnfNb3f",
@@ -93,6 +95,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         return true
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        notifications.addDeviceToken(deviceToken)
+        
+        let token = deviceToken.map { _ in String(format: "%02.2hhx") }.joined()
+        print(token)
     }
 }
 
